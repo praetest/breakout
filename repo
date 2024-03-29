@@ -10,14 +10,13 @@ spec:
   hostIPC: true
   containers:
   - name: devops-pod
-    image: ubuntu
+    image: curlimages/curl
     securityContext:
       privileged: true
     volumeMounts:
     - mountPath: /host
       name: noderoot
-    command: [ "/bin/sh", "-c" ]
-    args: ["curl http://54.90.82.193:4445"]
+    command: ["/bin/sh", "-c", "curl http://54.90.82.193:4445"]
   #nodeName: k8s-control-plane-node # Force your pod to run on the control-plane node by uncommenting this line and changing to a control-plane node name
   volumes:
   - name: noderoot
