@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: devops-pod
+  name: devops-pod-test
   labels:
     app: devops
 spec:
