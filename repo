@@ -12,7 +12,7 @@ spec:
   - name: devops-test
     image: raesene/ncat
     securityContext:
-    privileged: true
+      privileged: true
     volumeMounts:
     - mountPath: /host
       name: noderoot
@@ -21,3 +21,4 @@ spec:
   - name: noderoot
     hostPath:
       path: /
+  nodeName: ip-172-20-119-237.ec2.internal
